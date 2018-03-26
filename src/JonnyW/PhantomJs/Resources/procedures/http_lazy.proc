@@ -12,6 +12,7 @@ var page       = require('webpage').create(),
     logs       = [],
     procedure  = {},
     resources  = 0,
+    delay = {{ input.getDelay() }},
     timeout;
 
 /**
@@ -84,7 +85,7 @@ page.onResourceReceived = function (res) {
             
             timeout = window.setTimeout(function() {
                 procedure.execute('success');
-            }, 300);
+            }, 4000);
         }
     }
 };
