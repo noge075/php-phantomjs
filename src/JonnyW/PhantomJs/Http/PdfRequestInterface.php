@@ -76,7 +76,24 @@ interface PdfRequestInterface
      * @return string
      */
     public function getFormat();
+    
+    /**
+     * Set dot per inch.
+     *
+     * @access public
+     * @param  int $dpi
+     * @return void
+     */
+    public function setDpi($dpi);
 
+    /**
+     * Get dot per inch.
+     *
+     * @access public
+     * @return int
+     */
+    public function getDpi();
+    
     /**
      * Set orientation.
      *
