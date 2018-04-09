@@ -6,6 +6,7 @@
         paperFormat      = '{{ input.getFormat() }}',
         paperOrientation = '{{ input.getOrientation() }}',
         paperMargin      = {{ input.getMargin()|json_encode(constant('JSON_FORCE_OBJECT')) }},
+        dpi              = {{ input.getDpi() }},
         header           = {{ input.getRepeatingHeader()|json_encode(constant('JSON_FORCE_OBJECT')) }},
         footer           = {{ input.getRepeatingFooter()|json_encode(constant('JSON_FORCE_OBJECT')) }};
 
@@ -45,5 +46,6 @@
     };
     
     page.paperSize = paperSize;
+    page.dpi = dpi;
 
 {% endif %}
