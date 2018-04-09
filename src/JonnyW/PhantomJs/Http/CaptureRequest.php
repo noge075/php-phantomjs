@@ -76,6 +76,13 @@ class CaptureRequest extends AbstractRequest
     protected $quality;
 
     /**
+     * Capture DPI.
+     *
+     * @var int
+     */
+    protected $dpi;
+    
+    /**
      * Internal constructor.
      *
      * @param string $url     (default: null)
@@ -258,5 +265,27 @@ class CaptureRequest extends AbstractRequest
         $this->quality = (int) $quality;
 
         return $this;
+    }
+    
+    /**
+     * Set dot per inch.
+     *
+     * @access public
+     * @param  int $dpi
+     * @return void
+     */
+    public function setDpi($dpi)
+    {
+        $this->dpi = $dpi;
+    }
+    /**
+     * Get dot per inch.
+     *
+     * @access public
+     * @return int
+     */
+    public function getDpi()
+    {
+        return $this->dpi;
     }
 }
