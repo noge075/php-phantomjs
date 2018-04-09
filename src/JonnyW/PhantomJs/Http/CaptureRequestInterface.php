@@ -97,4 +97,19 @@ interface CaptureRequestInterface
      * @param int $format
      */
     public function setQuality($quality);
+    
+    
+    /**
+     * Get dpi of capture.
+     *
+     * @return string
+     */
+    public function getDpi();
+
+    /**
+     * Set dpi of the capture.
+     *
+     * @param int $dpi
+     */
+    public function setDpi($dpi);
 }
