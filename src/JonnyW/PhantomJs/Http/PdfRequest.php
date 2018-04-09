@@ -40,7 +40,15 @@ class PdfRequest extends CaptureRequest
      * @access protected
      */
     protected $format;
-
+    
+    /**
+     * Dot per inch
+     *
+     * @var int
+     * @access protected
+     */
+    protected $dpi;
+    
     /**
      * Orientation
      *
@@ -90,6 +98,7 @@ class PdfRequest extends CaptureRequest
         $this->paperHeight = '';
         $this->margin      = '1cm';
         $this->format      = 'A4';
+        $this->dpi         =  96;
         $this->orientation = 'portrait';
         $this->header      = array();
         $this->footer      = array();
@@ -193,7 +202,28 @@ class PdfRequest extends CaptureRequest
     {
         return $this->format;
     }
+    /**
+     * Set dot per inch.
+     *
+     * @access public
+     * @param  int $dpi
+     * @return void
+     */
+    public function setDpi($dpi)
+    {
+        $this->dpi = $dpi;
+    }
 
+    /**
+     * Get dot per inch.
+     *
+     * @access public
+     * @return int
+     */
+    public function getDpi()
+    {
+        return $this->dpi;
+    }
     /**
      * Set orientation.
      *
