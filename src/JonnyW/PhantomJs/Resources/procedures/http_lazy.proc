@@ -12,8 +12,8 @@ var page       = require('webpage').create(),
     logs       = [],
     procedure  = {},
     resources  = 0,
-    dpi = {{ input.getDelay() }},
-    delay = {{ input.getDpi() }},
+    dpi = {{ input.getDpi() }},
+    delay = {{ input.getDelay() }},
     timeout;
 
 /**
