@@ -12,7 +12,8 @@ var page       = require('webpage').create(),
     logs       = [],
     procedure  = {},
     resources  = 0,
-    delay = {{ input.getDelay() }},
+    dpi = {{ input.getDelay() }},
+    delay = {{ input.getDpi() }},
     timeout;
 
 /**
@@ -44,6 +45,8 @@ var page       = require('webpage').create(),
  * Page settings
  */
 [[ engine.load('page_settings') ]]
+
+page.dpi = dpi;
 
 /**
  * Page cookies
