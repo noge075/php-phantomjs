@@ -91,6 +91,7 @@ phantom.onError = function(msg, trace) {
 
 page.open ('{{ input.getUrl() }}', '{{ input.getMethod() }}', '{{ input.getBody() }}', function (status) {
     page.dpi = dpi;
+    page.zoomFactor = dpi /72;
     [[ engine.load('page_body_styles') ]]
     [[ engine.load('page_open') ]]
 });
