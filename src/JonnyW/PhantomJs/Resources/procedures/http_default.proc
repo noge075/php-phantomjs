@@ -88,9 +88,9 @@ phantom.onError = function(msg, trace) {
 /**
  * Open page
  */
-page.dpi = dpi;
 
 page.open ('{{ input.getUrl() }}', '{{ input.getMethod() }}', '{{ input.getBody() }}', function (status) {
+    page.dpi = dpi;
     [[ engine.load('page_body_styles') ]]
     [[ engine.load('page_open') ]]
 });
